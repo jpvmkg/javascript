@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Idade: <span id="pessoa">0</span></h1>
+    <button onclick="adicionar()">adicionar</button>
+    <button onclick="retirar()">retirar</button>
+    <script>
+
+        var pessoa = 0;
+
+        function adicionar(){
+            pessoa = pessoa + 1;
+            atualizaridade();
+        }
+
+        function retirar(){
+            
+            if(pessoa > 0)
+            pessoa = pessoa - 1;
+            atualizaridade();
+        }
+        function atualizaridade(){
+            var valoridade = document.getElementById("pessoa")
+            valoridade.textContent = pessoa;
+
+            if(pessoa >= 18){
+                valoridade.style.display = "block";
+                //alert("você já pode tirar sua carteira de motorista")
+            }else{
+                valoridade.style.display = "none";
+            }
+        }
+
+
+
+
+
+
+    </script>
+
+
+    
+</body>
+</html>
